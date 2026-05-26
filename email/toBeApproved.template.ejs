@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Application To Be Approved</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f1f1f1;
+        margin: 0;
+        padding: 0;
+      }
+      .container {
+        max-width: 600px;
+        margin: 0 auto;
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      }
+      h1 {
+        color: #333;
+        text-align: center;
+      }
+      p {
+        color: #555;
+        line-height: 1.6;
+        margin-bottom: 20px;
+      }
+      .btn {
+        display: inline-block;
+        padding: 10px 20px;
+        background-color: #007bff;
+        color: #fff;
+        text-decoration: none;
+        border-radius: 5px;
+        margin-top: 20px;
+      }
+      .footer {
+        margin-top: 30px;
+        text-align: center;
+      }
+      .footer p {
+        color: #888;
+        margin-bottom: 5px;
+      }
+      .footer a {
+        color: #888;
+        text-decoration: none;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 20px;
+      }
+      table td {
+        padding: 10px;
+        border-bottom: 1px solid #ddd;
+      }
+      .highlight {
+        background-color: #f9f9f9;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        padding: 15px;
+        margin-bottom: 20px;
+      }
+      .header {
+        text-align: center;
+        font-size: 24px;
+        border-radius: 5px 5px 0 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <h1>Application To Be Approved</h1>
+      </div>
+      <div class="content">
+        <p>Dear <%= userName %>,</p>
+        <p>Your sifarish application has been forwarded for final approval.</p>
+        <p>
+          You can check the status of your application using the link below.
+        </p>
+        <a href="<%= applicationLink %>" class="btn">Check Status</a>
+      </div>
+      <div class="footer">
+        <p>Thank you for using our service.</p>
+        <% if (officeDetails?.name) { %>
+        <p><%= officeDetails.name.ne %></p>
+        <% } %>
+      </div>
+    </div>
+  </body>
+</html>
